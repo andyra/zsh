@@ -54,6 +54,8 @@ alias ns='sudo kill $(cat /usr/local/nginx/logs/nginx.pid)'
 alias nr='sudo kill -HUP $(cat /usr/local/nginx/logs/nginx.pid)'
 alias nc='mate /etc/hosts /usr/local/nginx/conf/nginx.conf'
 
+alias mm='middleman'
+
 alias bndl='bundle install --binstubs && rbenv rehash'
 
 alias rs='rails server'
@@ -79,6 +81,7 @@ alias ytd='youtube-dl -f'
 alias yt='youtube-dl -f 22'
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=./bin:$PATH
 
 export RBENV_ROOT=/usr/local/opt/rbenv
