@@ -29,6 +29,7 @@ export PGDATA='/usr/local/var/postgres/'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+
 alias ls='ls -F'
 alias la='ls -F -A'
 alias ll='ls -F -A -o -h'
@@ -50,11 +51,8 @@ alias gf='git flow'
 alias gh='github'
 alias gr='git reset'
 
-alias ns='sudo kill $(cat /usr/local/nginx/logs/nginx.pid)'
-alias nr='sudo kill -HUP $(cat /usr/local/nginx/logs/nginx.pid)'
-alias nc='mate /etc/hosts /usr/local/nginx/conf/nginx.conf'
-
 alias mm='middleman'
+alias st='subl'
 
 alias bndl='bundle install --binstubs && rbenv rehash'
 
@@ -62,13 +60,6 @@ alias rs='rails server'
 alias rc='rails console'
 alias rg='rails generate'
 alias rr='rails runner'
-
-alias ss='script/server webrick'
-alias sc='script/console'
-alias sg='script/generate'
-
-alias gmi='gem install'
-alias gmu='gem update'
 
 alias bu="brew update && brew outdated"
 
