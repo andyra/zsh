@@ -50,6 +50,7 @@ alias gc='git checkout'
 alias gf='git flow'
 alias gh='github'
 alias gr='git reset'
+alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 alias mm='middleman'
 alias st='subl'
@@ -71,10 +72,17 @@ alias ytf='youtube-dl -F'
 alias ytd='youtube-dl -f'
 alias yt='youtube-dl -f 22'
 
+killit() {
+  lsof -i :$1 | grep LISTEN | awk '{print $2}' | xargs kill
+}
+
+# Case-insensitive tab completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# Set $PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=./bin:$PATH
 
 export RBENV_ROOT=/usr/local/opt/rbenv
-
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
