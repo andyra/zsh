@@ -38,7 +38,7 @@ alias pg='ps aux | grep'
 
 alias gs='git status'
 alias ga='git add'
-alias gpl='git pull'
+alias gpl='git pull --rebase'
 alias gps='git push'
 alias gl='git lg'
 alias gla='git lga'
@@ -72,6 +72,9 @@ alias ytf='youtube-dl -F'
 alias ytd='youtube-dl -f'
 alias yt='youtube-dl -f 22'
 
+alias befs='bundle exec foreman start'
+
+# Kill processes on a port (killit 3000)
 killit() {
   lsof -i :$1 | grep LISTEN | awk '{print $2}' | xargs kill
 }
